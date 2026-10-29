@@ -8,6 +8,19 @@
   function updatePhone() { phone.required = ['WhatsAppilla', 'Tekstiviestillä', 'Soittamalla'].includes(preference.value); }
   preference.addEventListener('change', updatePhone);
   updatePhone();
+  // Native validation can stop a submit before the submit handler runs.
+  // Explain the missing field in the page as well as the browser's tooltip.
+  let invalidReported = false;
+  form.addEventListener('invalid', event => {
+    if (invalidReported) return;
+    invalidReported = true;
+    const input = event.target;
+    const label = input.labels?.[0]?.textContent.trim().replace(/\s+/g, ' ') || 'Pakollinen kenttä';
+    result.textContent = input.type === 'checkbox'
+      ? 'Lähetys odottaa yhteydenottolupaa. Rastita lupa, jos haluat Eskon ottavan sinuun yhteyttä.'
+      : 'Tarkista kenttä: ' + label + '. ' + input.validationMessage;
+    setTimeout(() => { invalidReported = false; }, 0);
+  }, true);
   let sending = false;
   form.addEventListener('submit', async event => {
     event.preventDefault();
