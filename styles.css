@@ -47,3 +47,22 @@ h2{font-weight:400;font-size:clamp(35px,4vw,49px);line-height:1.2}h2 em{color:#9
 .story-closing{font:italic 27px/1.5 var(--serif);color:var(--navy);border-left:2px solid var(--gold);padding-left:22px;margin-top:30px}.text-link{color:#497c82;text-underline-offset:5px;font-size:15px}.text-link span{margin-left:12px}@media(max-width:640px){.story-closing{font-size:24px;padding-left:18px}}
 
 .story-aside{min-width:0}.holiday-photo{margin:36px 0 0;max-width:320px}.holiday-photo img{display:block;width:100%;height:auto;border-radius:15px;box-shadow:0 10px 30px #1726420b}.holiday-photo figcaption{font:italic 17px/1.5 var(--serif);color:#806b3c;padding-top:12px}@media(max-width:640px){.holiday-photo{max-width:260px;margin:28px auto 10px}}
+
+/* Värikkäämpi, valoisa versio. */
+:root{--gold:#a66d25;--muted:#515f6c}
+body{background:#fffcf8}
+.header{background:transparent}.resonance-signature{color:#9a532e}.resonance-signature>span{color:#c27835}
+.hero{background:linear-gradient(120deg,#fff8ed 0%,#fff6f0 50%,#edf7f5 100%);border-radius:26px;padding-inline:32px;margin-top:25px;margin-bottom:45px}
+.hero::before{background:#d7eee8;left:12px;bottom:28px;width:210px;height:210px}
+.portrait::before{border-color:#cb9159}.portrait::after{color:#b96e30}
+h1 em{color:#a55d33}.eyebrow{color:#246c6a}.eyebrow::before{color:#b17431}
+.button{background:#246c6a;box-shadow:0 6px 20px #246c6a20}.button:hover{background:#195553}
+h2 em{color:#98602c}.story{border-color:#eadbc9}.story-closing{border-color:#c5774f;background:#fff1e6;padding:18px 22px;border-radius:0 12px 12px 0}.signature{color:#a45b39}
+.team{background:#e5f2ee;border-color:#c6dfd5}.team .eyebrow{color:#276966}.team h2 em{color:#246c6a}
+.values article{border:1px solid #d9ddda;border-top:4px solid #3e8880;box-shadow:0 7px 24px #21483f08}.values article:nth-child(1){background:#fffaf1;border-top-color:#c18b39}.values article:nth-child(2){background:#fbf6ff;border-top-color:#8d6caa}.values article:nth-child(3){background:#f1fbf8;border-top-color:#3e8880}
+.faq details{border-color:#dcd5e4}.faq details[open]{background:#f5f0fa;padding-inline:16px;border-radius:9px}.faq h2 em{color:#7b568f}
+.contact{background:linear-gradient(120deg,#efe9f7,#e7f4f1)}.contact h2 em{color:#6d508c}.contact .eyebrow{color:#5f477a}.contact-note{border-color:#d9cce7;box-shadow:0 12px 35px #6044790b}.survey-status{background:#fff5e7;border-color:#ebd5b2;color:#715128}
+#intro-survey input:not([type="checkbox"]),#intro-survey select,#intro-survey textarea{background:#fcfbfe;border-color:#cec5d8}#intro-survey input[type="checkbox"]{accent-color:#246c6a}
+#tietosuoja{background:#fffcf8}.footer{border-color:#e4d7c8}.text-link,.contact-email a{color:#246764}
+@media(max-width:900px){.hero{padding-inline:24px}}
+@media(max-width:640px){.hero{padding-inline:18px;width:calc(100% - 24px);border-radius:18px;margin-top:8px;margin-bottom:15px}.hero::before{width:160px;height:160px;left:5px}.story-closing{padding:15px 18px}.faq details[open]{padding-inline:12px}}
