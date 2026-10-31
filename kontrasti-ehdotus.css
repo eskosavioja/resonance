@@ -1,0 +1,28 @@
+/* Paikallinen ehdotus: nykyinen sivu ei käytä tätä tiedostoa. */
+.team{background:#173f43;color:#fff9ee;border-color:#173f43}
+.team .eyebrow{color:#bcded7}.team .eyebrow::before{color:#e1bd7e}
+.team h2 em{color:#edca8e}.team-heading>p{color:#e0eae7}
+.values article,.values article:nth-child(1),.values article:nth-child(2),.values article:nth-child(3){background:#214c50;color:#fff9ee;border:1px solid #4b7070;border-top:3px solid #d2ab71;box-shadow:none}
+.values article:nth-child(2){border-top-color:#c6afd4}.values article:nth-child(3){border-top-color:#9ed1bf}
+.values p{color:#e0eae7}.team .values h3{color:#fff9ee}
+.contact{background:#302338;color:#fff9ee}
+.contact .eyebrow{color:#d8c4e4}.contact .eyebrow::before{color:#e1bd7e}.contact h2 em{color:#edca8e}
+.contact-inner>div>p{color:#ede3ef}
+.contact-note{background:#fffdf9;color:#172642;border-color:#dfd4e4;box-shadow:0 12px 40px #170f2022}
+.contact-note h3{color:#172642}.contact-note p{color:#515f6c}
+.contact-note .survey-status{color:#715128;background:#fff5e7}
+.contact-note a:not(.button){color:#246764}
+.contact-note .button{color:#fff}
+#survey-result:not(:empty){padding:12px;border-left:3px solid #b38e52;background:#f7f1e7;color:#24384a}
+.footer{background:#302338;color:#e4d9e8;border-top:1px solid #58445f;width:100%;padding-inline:max(40px,calc((100% - 1080px)/2))}
+.footer .brand{color:#fff9ee}
+@media(max-width:640px){.footer{padding-inline:20px}}
+
+.contact-inner>.contact-note>p{color:#515f6c}.contact-inner>.contact-note>.survey-status{color:#715128}
+
+.travel-photo{margin:36px 0 0;max-width:350px}
+.travel-photo img{display:block;width:100%;height:auto;border-radius:16px}
+.story-travel{margin-top:45px}
+.contact-travel{max-width:380px;margin-top:32px}
+@media(max-width:640px){.travel-photo{width:100%;max-width:300px;margin:28px auto 0}.contact-travel{margin-bottom:12px}}
+
