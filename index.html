@@ -9,9 +9,9 @@
   <meta name="theme-color" content="#17253b">
   <title>Esko Savioja — Yhteinen suunta. Omat tavoitteet.</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261101-1">
   <link rel="stylesheet" href="kontrasti-ehdotus.css">
-  <script src="survey.js?v=20261029-2" defer></script>
+  <script src="survey.js?v=20261101-1" defer></script>
 </head>
 <body>
   <a class="skip" href="#sisalto">Siirry sisältöön</a>
@@ -42,7 +42,7 @@
         <p>Kun eteeni tuli uudenlainen liiketoimintamahdollisuus, olin ensin skeptinen. En tuntenut toimintatapaa, eikä se heti tuntunut omalta. Päätin silti ottaa selvää. Vähitellen aloin nähdä siinä asioita, jotka sopivat omiin tavoitteisiini — erityisesti mahdollisuuden tehdä yhteistyötä oppimishaluisten ihmisten kanssa nykyisestä työstäni luopumatta.</p>
         <p>Eniten minut yllätti se, kuinka paljon olen oppinut ihmisistä, vuorovaikutuksesta ja itsestäni. Olen tutustunut ihmisiin, joita en muuten olisi tavannut, saanut uusia kokemuksia ja löytänyt uudenlaista innostusta tekemiseen.</p>
         <p>Nyt haluan rakentaa tätä pitkäjänteisesti. Minulla on omat taloudelliset tavoitteeni, mutta yhtä tärkeää on se, kenen kanssa teen töitä. Haluan ympärilleni ihmisiä, joiden kanssa on mukavaa ja innostavaa tehdä asioita ja joilla on omia päämääriä. Haluan myös tukea heitä niiden tavoittelussa.</p>
-        <p>En tiedä vielä, kuinka pitkälle pääsemme. Innostus ei yksin riitä, vaan tarvitaan työtä, oppimista ja aikaa. Minulle jo se merkitsee paljon, että elämässä on taas uusia asioita, joita odottaa.</p>
+        <p>Katson tulevaan innolla. On innostavaa rakentaa jotain omaa, oppia uutta ja edetä kohti tavoitteita yhdessä muiden kanssa. Jokainen askel avaa uusia mahdollisuuksia — ja minulle juuri se tuo arkeen lisää energiaa ja asioita, joita odottaa.</p>
         <p class="story-closing">Minun ei tarvitse luopua hyvästä, jotta elämään mahtuisi jotain lisää.</p>
         <p class="signature">Esko</p>
         <a class="text-link" href="#yhteys">Mitä sinä haluaisit seuraavaksi? <span aria-hidden="true">↗</span></a>
@@ -63,14 +63,32 @@
         <figure class="travel-photo contact-travel"><img src="esko-norja-luotu.png" alt="Tekoälyllä luotu kuvituskuva Eskosta Norjan rannikkokylässä" width="1122" height="1402" loading="lazy" decoding="async"></figure>
       </div>
       <div class="contact-note"><h3>Aloitetaan tutustumisesta.</h3>
-      <p>Vastaa muutamaan kysymykseen omin sanoin. Tämä ei sido sinua mukaan toimintaan.</p>
+      <p>Kerro hieman itsestäsi ja siitä, mitä toivot tulevalta. Vastaaminen vie pari minuuttia, eikä se sido sinua mihinkään.</p>
       <p class="survey-status" id="survey-note">Pakolliset kentät on merkitty tähdellä. Voit valita sinulle sopivan yhteydenottotavan.</p>
       <form id="intro-survey" action="https://formspree.io/f/mkjjzyok" method="post" aria-describedby="survey-note">
         <fieldset disabled><legend class="sr-only">Tutustumiskysely</legend>
           <label for="survey-name">Nimi *</label><input id="survey-name" name="name" autocomplete="name" maxlength="120" required>
-          <label for="survey-interest">Mikä herätti kiinnostuksesi? *</label>
-          <select id="survey-interest" name="interest" required><option value="">Valitse sinulle lähin vaihtoehto</option><option>Mahdollisuus lisätuloihin</option><option>Jonkin oman rakentaminen työn rinnalle</option><option>Uusi suunta ja uuden oppiminen</option><option>Tiimi ja yhdessä tekeminen</option><option>Haluan vain kuulla lisää</option><option>Jokin muu</option></select>
-          <label for="survey-goal">Mitä haluaisit elämässäsi enemmän? <span>(vapaaehtoinen)</span></label><textarea id="survey-goal" name="goal" rows="3" maxlength="2000" placeholder="Kerro sen verran kuin sinusta tuntuu hyvältä."></textarea>
+          <fieldset class="survey-choices" data-min-choice><legend>Mikä herätti kiinnostuksesi? *</legend><p class="field-help">Voit valita useamman vaihtoehdon.</p>
+            <label class="choice"><input type="checkbox" name="interest" value="Enemmän vapautta omaan arkeen"> <span>Enemmän vapautta omaan arkeen</span></label>
+            <label class="choice"><input type="checkbox" name="interest" value="Mahdollisuus lisätuloihin"> <span>Mahdollisuus lisätuloihin</span></label>
+            <label class="choice"><input type="checkbox" name="interest" value="Jonkin oman rakentaminen työn rinnalle"> <span>Jonkin oman rakentaminen työn rinnalle</span></label>
+            <label class="choice"><input type="checkbox" name="interest" value="Uusi suunta ja uuden oppiminen"> <span>Uusi suunta ja uuden oppiminen</span></label>
+            <label class="choice"><input type="checkbox" name="interest" value="Kannustava porukka ja yhdessä tekeminen"> <span>Kannustava porukka ja yhdessä tekeminen</span></label>
+            <label class="choice"><input type="checkbox" name="interest" value="Jokin muu"> <span>Jokin muu</span></label>
+          </fieldset>
+          <fieldset class="survey-choices" data-min-choice><legend>Millaiset asiat tuntuvat sinulle omilta? *</legend><p class="field-help">Valitse yksi tai useampi.</p>
+            <label class="choice"><input type="checkbox" name="strengths" value="Autan ja kannustan mielelläni muita"> <span>Autan ja kannustan mielelläni muita</span></label>
+            <label class="choice"><input type="checkbox" name="strengths" value="Olen utelias uusille mahdollisuuksille"> <span>Olen utelias uusille mahdollisuuksille</span></label>
+            <label class="choice"><input type="checkbox" name="strengths" value="Minulla on tavoitteita, joita haluan toteuttaa"> <span>Minulla on tavoitteita, joita haluan toteuttaa</span></label>
+            <label class="choice"><input type="checkbox" name="strengths" value="Nautin yhdessä tekemisestä"> <span>Nautin yhdessä tekemisestä</span></label>
+            <label class="choice"><input type="checkbox" name="strengths" value="Haluan oppia ja kehittää itseäni"> <span>Haluan oppia ja kehittää itseäni</span></label>
+            <label class="choice"><input type="checkbox" name="strengths" value="Haluan vielä tunnustella, mikä sopisi minulle"> <span>Haluan vielä tunnustella, mikä sopisi minulle</span></label>
+          </fieldset>
+          <label for="survey-goal">Jos aika tai raha eivät rajoittaisi, mitä haluaisit elämääsi enemmän? <span>(vapaaehtoinen)</span></label><textarea id="survey-goal" name="goal" rows="3" maxlength="2000" placeholder="Voit kertoa toiveistasi tai tavoitteistasi omin sanoin."></textarea>
+          <fieldset class="survey-choices"><legend>Kuinka ajankohtaista sinulle on kuulla lisää? *</legend>
+            <label class="choice"><input type="radio" name="openness" value="Haluan kuulla lisää pian" required> <span>Haluan kuulla lisää pian.</span></label>
+            <label class="choice"><input type="radio" name="openness" value="Olen utelias ja haluan tutustua rauhassa" required> <span>Olen utelias ja haluan tutustua rauhassa.</span></label>
+          </fieldset>
           <label for="survey-contact">Miten toivot minun ottavan yhteyttä? *</label><select id="survey-contact" name="contact_preference" required><option value="">Valitse yhteydenottotapa</option><option>Sähköpostilla</option><option>WhatsAppilla</option><option>Tekstiviestillä</option><option>Soittamalla</option></select>
           <label for="survey-email">Sähköposti *</label><input id="survey-email" name="email" type="email" autocomplete="email" maxlength="254" required>
           <label for="survey-phone">Puhelinnumero <span>(jos toivot WhatsAppia, tekstiviestiä tai soittoa)</span></label><input id="survey-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
@@ -84,7 +102,7 @@
     </div></section>
     <section class="wrap section" id="tietosuoja" aria-labelledby="privacy-title"><p class="eyebrow">TIETOSUOJA</p><h2 id="privacy-title">Tutustumiskyselyn tietosuoja</h2>
       <p>Rekisterinpitäjä ja yhteyshenkilö: Esko Savioja, resonance.eskosavioja@gmail.com.</p>
-      <p>Kyselyssä antamiasi tietoja käytetään yhteydenottoon ja mahdollisuudesta kertomiseen antamasi suostumuksen perusteella. Tietoja ovat nimi, kiinnostuksen syy, mahdollinen tavoitekuvaus, yhteystiedot, toivottu yhteydenottotapa ja lupa yhteydenottoon. Vastaukset saadaan sinulta itseltäsi. Lomake ei tilaa uutiskirjettä tai liitä sinua markkinointilistalle.</p>
+      <p>Kyselyssä antamiasi tietoja käytetään yhteydenottoon ja mahdollisuudesta kertomiseen antamasi suostumuksen perusteella. Tietoja ovat nimi, kiinnostuksen aiheet, kuvaus itselle tärkeistä asioista, mahdollinen tavoitekuvaus, halukkuus kuulla lisää, yhteystiedot, toivottu yhteydenottotapa ja lupa yhteydenottoon. Vastaukset saadaan sinulta itseltäsi. Lomake ei tilaa uutiskirjettä tai liitä sinua markkinointilistalle.</p>
       <p>Vastaukset tallentuvat ja välittyvät Formspreen kautta sähköpostiin. Formspree ilmoittaa käyttävänsä Yhdysvalloissa sijaitsevia palvelimia ja EU:n vakiosopimuslausekkeita käsittelijänä. Sähköpostipalveluna on Gmail. Palveluntarjoajat käsittelevät myös palvelun tuottamiseen ja suojaamiseen tarvittavia teknisiä tietoja.</p>
       <p>Voit peruuttaa suostumuksesi sekä pyytää tietojesi tarkastamista, oikaisua, poistamista tai käsittelyn rajoittamista lähettämällä viestin yllä olevaan sähköpostiin. Oikeus tietojen siirtoon määräytyy sovellettavien edellytysten mukaan. Voit tehdä valituksen <a href="https://tietosuoja.fi/ilmoitus-tietosuojavaltuutetulle">tietosuojavaltuutetulle</a>. Suostumuksen peruuttaminen ei vaikuta sitä edeltäneen käsittelyn lainmukaisuuteen.</p>
       <p>Jos keskustelu ei johda jatkoon, kyselyn vastaukset ja niihin liittyvät sähköpostit poistetaan Formspreestä ja Gmailista viimeistään yhden kuukauden kuluttua kyselyyn vastaamisesta. Jos yhteydenpito jatkuu, tietoja säilytetään vain yhteydenpidon ja sovittujen jatkotoimien edellyttämän ajan. Mahdollisesta muusta käyttötarkoituksesta ja säilytyksestä kerrotaan erikseen.</p><p>Googlen palveluissa tietoja voidaan käsitellä myös EU/ETA-alueen ulkopuolella Googlen tietosuojakäytännössä kuvatuin suojatoimin. Lisätietoa palveluntarjoajien käytännöistä ja siirtojen suojatoimista on alla olevissa linkeissä. Sivusto julkaistaan GitHub Pagesissa, joka käsittelee sivupyyntöjen teknisiä tietoja, kuten IP-osoitteita, palvelun tuottamista ja suojaamista varten.</p>

@@ -3,6 +3,16 @@
   const result = document.getElementById('survey-result');
   const fields = form.querySelector('fieldset');
   fields.disabled = false;
+  // Require one answer in each checkbox group without requiring every option.
+  form.querySelectorAll('[data-min-choice]').forEach(group => {
+    const boxes = [...group.querySelectorAll('input[type="checkbox"]')];
+    function validateGroup() {
+      boxes[0].setCustomValidity(boxes.some(box => box.checked) ? '' : 'Valitse vähintään yksi vaihtoehto.');
+    }
+    group.addEventListener('change', validateGroup);
+    form.addEventListener('reset', () => setTimeout(validateGroup, 0));
+    validateGroup();
+  });
   const preference = document.getElementById('survey-contact');
   const phone = document.getElementById('survey-phone');
   function updatePhone() { phone.required = ['WhatsAppilla', 'Tekstiviestillä', 'Soittamalla'].includes(preference.value); }

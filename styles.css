@@ -66,3 +66,14 @@ h2 em{color:#98602c}.story{border-color:#eadbc9}.story-closing{border-color:#c57
 #tietosuoja{background:#fffcf8}.footer{border-color:#e4d7c8}.text-link,.contact-email a{color:#246764}
 @media(max-width:900px){.hero{padding-inline:24px}}
 @media(max-width:640px){.hero{padding-inline:18px;width:calc(100% - 24px);border-radius:18px;margin-top:8px;margin-bottom:15px}.hero::before{width:160px;height:160px;left:5px}.story-closing{padding:15px 18px}.faq details[open]{padding-inline:12px}}
+.survey-choices{margin:26px 0!important;padding:0!important;border:0;min-width:0}
+.survey-choices legend{font-size:15px;font-weight:600;line-height:1.5;padding:0;margin-bottom:10px;max-width:100%}
+#intro-survey .survey-choices .choice{display:flex;gap:11px;align-items:flex-start;padding:11px 12px;border:1px solid #dce1dc;border-radius:8px;margin:8px 0;background:#fafbf8;cursor:pointer}
+#intro-survey .choice input{flex:0 0 auto;width:18px;height:18px;margin:3px 0 0;accent-color:#246764}
+#intro-survey .choice span{font-size:14px;line-height:1.6}
+.field-help{font-size:12px;color:#606773;margin:0 0 10px}
+/* Tutustumiskyselyn valintakortit */
+#intro-survey .survey-choices{margin:26px 0;padding:0;border:0;min-width:0}
+#intro-survey .survey-choices .choice{display:flex;gap:11px;align-items:flex-start;padding:11px 12px;border:1px solid #dce1dc;border-radius:8px;margin:8px 0;background:#fafbf8;cursor:pointer}
+#intro-survey .survey-choices .choice input{flex:0 0 18px;width:18px;height:18px;min-width:18px;padding:0;margin:3px 0 0;accent-color:#246764}
+#intro-survey .survey-choices .choice span{font-size:14px;line-height:1.6}
