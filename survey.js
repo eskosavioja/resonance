@@ -15,7 +15,15 @@
   });
   const preference = document.getElementById('survey-contact');
   const phone = document.getElementById('survey-phone');
-  function updatePhone() { phone.required = ['WhatsAppilla', 'Tekstiviestillä', 'Soittamalla'].includes(preference.value); }
+  const email = document.getElementById('survey-email');
+  function updatePhone() {
+    const usePhone = ['WhatsAppilla', 'Tekstiviestillä', 'Soittamalla'].includes(preference.value);
+    const useEmail = preference.value === 'Sähköpostilla';
+    phone.required = usePhone; phone.disabled = !usePhone;
+    email.required = useEmail; email.disabled = !useEmail;
+    document.getElementById('phone-field').hidden = !usePhone;
+    document.getElementById('email-field').hidden = !useEmail;
+  }
   preference.addEventListener('change', updatePhone);
   updatePhone();
   // Native validation can stop a submit before the submit handler runs.
@@ -26,7 +34,7 @@
     invalidReported = true;
     const input = event.target;
     const label = input.labels?.[0]?.textContent.trim().replace(/\s+/g, ' ') || 'Pakollinen kenttä';
-    result.textContent = input.type === 'checkbox'
+    result.textContent = input.name === 'contact_permission'
       ? 'Lähetys odottaa yhteydenottolupaa. Rastita lupa, jos haluat Eskon ottavan sinuun yhteyttä.'
       : 'Tarkista kenttä: ' + label + '. ' + input.validationMessage;
     setTimeout(() => { invalidReported = false; }, 0);
@@ -46,6 +54,6 @@
       result.textContent = 'Kiitos vastauksistasi! Otan sinuun yhteyttä toivomallasi tavalla.';
     } catch {
       result.textContent = 'Lähetystä ei voitu vahvistaa. Vastauksesi ovat yhä lomakkeella. Voit yrittää uudelleen tai kirjoittaa osoitteeseen resonance.eskosavioja@gmail.com.';
-    } finally {sending = false; fields.disabled = false;}
+    } finally {sending = false; fields.disabled = false; updatePhone();}
   });
 })();

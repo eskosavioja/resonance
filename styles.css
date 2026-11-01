@@ -77,3 +77,12 @@ h2 em{color:#98602c}.story{border-color:#eadbc9}.story-closing{border-color:#c57
 #intro-survey .survey-choices .choice{display:flex;gap:11px;align-items:flex-start;padding:11px 12px;border:1px solid #dce1dc;border-radius:8px;margin:8px 0;background:#fafbf8;cursor:pointer}
 #intro-survey .survey-choices .choice input{flex:0 0 18px;width:18px;height:18px;min-width:18px;padding:0;margin:3px 0 0;accent-color:#246764}
 #intro-survey .survey-choices .choice span{font-size:14px;line-height:1.6}
+/* Yhteydenotto: johdanto, lomake ja kuva samassa lukujärjestyksessä. */
+.team-intro p{color:#e0eae7;font-size:18px}
+.contact-inner>.contact-intro{grid-column:1;grid-row:1}
+.contact-inner>.contact-note{grid-column:2;grid-row:1 / span 2}
+.contact-inner>.contact-travel{grid-column:1;grid-row:2;margin-top:-38px}
+#intro-survey [hidden]{display:none!important}
+@media(max-width:640px){.contact-inner>.contact-intro,.contact-inner>.contact-note,.contact-inner>.contact-travel{grid-column:1;grid-row:auto}.contact-inner>.contact-travel{margin-top:4px}.team-intro p{font-size:17px}}
+.contact-inner{grid-template-rows:min-content 1fr}
+@media(max-width:640px){.contact-inner{grid-template-rows:auto}}
