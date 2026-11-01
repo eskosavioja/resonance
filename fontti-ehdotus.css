@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(font-preview-1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(font-preview-2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(font-preview-3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(font-preview-4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(font-preview-5.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(font-preview-6.ttf) format('truetype');
+}
+
+:root{--serif:'Fraunces',Georgia,serif;--sans:'Manrope','Segoe UI',sans-serif}
+body{font-size:16px;line-height:1.8}
+h1,h2{font-weight:400;letter-spacing:-.035em;font-optical-sizing:auto}
+h1{font-size:clamp(40px,4.7vw,62px);line-height:1.16}
+h2{font-size:clamp(32px,3.4vw,44px);line-height:1.2}
+h1 em,h2 em{font-style:normal}
+.brand{font-weight:500;letter-spacing:-.04em}
+.values h3{font-weight:400;font-size:24px}
+.contact-note h3{font-size:29px;line-height:1.25}
+.lead{font-size:18px;line-height:1.75}
+.story-closing{font-style:normal;font-size:25px}
+.resonance-signature,.signature{font-style:normal}
+@media(max-width:640px){h1{font-size:clamp(37px,9.7vw,48px)}h2{font-size:33px}.contact-note h3{font-size:26px}.story-closing{font-size:23px}}
